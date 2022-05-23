@@ -1,0 +1,21 @@
+# Default values for rrgenchart.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+name: rr-test
+
+replicaCount: 1
+
+image:
+  registry: lempi
+  repository: rickroll-gen
+  pullPolicy: Always
+#  # Overrides the image tag whose default is the chart appVersion.
+#  tag: latest
+
+containerPort: 30001
+
+service:
+  type: NodePort
+  port: 80
+  nodePort: 30001
